@@ -40,7 +40,7 @@ def get_hat_position(x, y, w, h, hat_index, hat_width):
     """Calculate the position for placing the hat based on the hat type."""
     adjustments = {
         0: (int(w / 8), int(-h / 2)),
-        1: (int(w / 12), int(-h / 1.2)),
+        1: (int(w / 19), int(-h / 1.2)),
         2: (int(w / 14), int(-h / 0.8)),
         3: (int(w / 14), int(-h / 1.5)),
         4: (int(w / -11), int(-h / 2)),
@@ -102,7 +102,9 @@ def main():
         for (x, y, w, h) in faces:
             if current_hat == 6:
                 hat_height = int(h * 1.3)
-            elif current_hat == 2 and current_hat == 1:
+            elif current_hat == 2:
+                hat_height = int(h * 1)
+            elif current_hat == 1:
                 hat_height = int(h * 1.5)
             else:
                 hat_height = int(h * 1)
